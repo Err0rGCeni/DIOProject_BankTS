@@ -1,0 +1,145 @@
+main {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1440px;
+    display: grid;
+    grid-template-areas:
+        "logo logo logo"
+        "create-user user-list user-profile"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: black;
+}
+
+h2 {
+    margin: 0.5rem;
+}
+
+button {
+    height: 40px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    main {
+        grid-template-areas:
+            "logo"
+            "create"
+            "list"
+            "actions"
+        ;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+}
+
+main>div {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #c0c0c0;
+    transition: all 1s;
+}
+
+main div:hover {
+    background-color: #fff;
+    transition: all 0.5s;
+}
+
+#logo {
+    box-sizing: border-box;
+    grid-area: logo;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+    background-image: linear-gradient(60deg, silver, black, silver);
+}
+
+#user-creation form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#user-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#user-list li {
+    margin: 1rem 0rem;
+    list-style: '»';
+}
+
+#user-list .PeopleAccount {
+    background-color: palegreen;
+    list-style: disc;
+}
+
+#user-list .CompanyAccount {
+    background-color: paleturquoise;
+    list-style: square;
+}
+
+#user-list .SpecialAccount {
+    background-color: palegoldenrod;
+    list-style: circle;
+}
+
+#user-list #user-radio-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#user-profile #action-fields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#user-profile .actions-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#user-infos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+#user-infos .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.5rem 0rem;
+}
+
+#user-infos .info * {
+    margin: 0;
+    padding: 0;
+}
+
+#user-actions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    visibility: hidden;
+}
+
+#user-actions button{
+    flex-grow: 1;
+}

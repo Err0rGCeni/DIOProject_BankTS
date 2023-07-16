@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIOTS Banking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <img src="Logo.jpg" alt="Logo" id="logo">
+
+        <div id="user-creation">
+            <h2>Cadastrar</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="account-type">Tipo de Conta:</label>
+                <select name="account-type" id="account-type" required>
+                    <option value="pessoa">Pessoa</option>
+                    <option value="empresa">Empresa</option>
+                    <option value="especial">Especial</option>
+                </select>
+
+                <button type="button" id="btn-user-creation">Cadastrar</button>
+            </form>
+        </div>
+
+        <div id="user-list">
+            <h2>Lista de Usuários</h2>
+            <ul>
+                <li>Lista vazia!</li>
+            </ul>
+        </div>
+
+        <div id="user-profile">
+            <div class="actions-header">
+                <h2>Ações</h2>
+                <label for="select-user">Usuário:
+                    <select name="select-user" id="select-user">
+                        <option value="">Sem usuários</option>
+                        
+                    </select>
+                </label>
+            </div>
+
+            <div id="user-infos">
+                <span class="info">
+                    <h3>Número da Conta:</h3>
+                    <p>1</p>
+                </span>
+                <span class="info">
+                    <h3>Nome:</h3>
+                    <p>2</p>
+                </span>
+                <span class="info">
+                    <h3>Saldo:</h3>
+                    <p>3</p>
+                </span>
+                <span class="info">
+                    <h3>Status:</h3>
+                    <p>4</p>
+                </span>
+            </div>
+
+            <div id="user-actions">
+                <input type="number" name="input-deposit" id="input-deposit" value="0">
+                <button type="button" id="btn-deposit" disabled>Depositar</button>
+                <input type="number" name="input-withdraw" id="input-withdraw" value="0">
+                <button type="button" id="btn-withdraw" disabled>Sacar</button>
+                <input type="number" name="input-loan" id="input-loan" value="0">
+                <button type="button" id="btn-loan" disabled>Pegar Empréstimo</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="dist/index.js" type="module"></script>
+</body>
+
+</html>
